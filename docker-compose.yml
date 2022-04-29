@@ -37,3 +37,12 @@ services:
     depends_on:
       - php
       - database
+
+  cypress:
+    image: cypress:latest
+    ipc: host
+    build: ./services/cypress
+    ports:
+      - "9000:80"
+    volumes:
+      - "./services/cypress/tests:/app/tests:ro"
