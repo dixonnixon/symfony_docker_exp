@@ -22,4 +22,4 @@ RUN REPEATABLE docker-compose build --parallel
 RUN docker-compose up -d
 
 # BUTTON Deploy this pipeline
-RUN docker-compose exec php bash echo 'hehey'
+RUN docker-compose exec php php echo 'hehey'
