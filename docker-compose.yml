@@ -15,16 +15,16 @@ services:
     volumes:
       - ./mysql:/var/lib/mysql
   
-  # php:
-  #   container_name: php
-  #   build:
-  #     context: ./php
-  #   ports:
-  #     - '9000:9000'
-  #   volumes:
-  #     - ./app:/var/www/symfony_docker
-  #   depends_on:
-  #     - database
+  php:
+    container_name: php
+    build:
+      context: ./php
+    ports:
+      - '9001:9001'
+    volumes:
+      - ./app:/var/www/symfony_docker
+    depends_on:
+      - database
 
   nginx:
     container_name: nginx
