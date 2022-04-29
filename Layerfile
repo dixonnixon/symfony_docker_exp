@@ -23,6 +23,3 @@ RUN docker-compose up -d
 
 # BUTTON Deploy this pipeline
 RUN docker-compose exec php bash echo 'hehey'
-
-# TODO: change port to whatever is configured in your docker-compose.yml
-# EXPOSE localhost:8000
